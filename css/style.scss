@@ -1,0 +1,526 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1,3;
+    font-family: "roboto";
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+// ALL VARIABLES
+
+
+// colors
+$wcolor:#ffffff;
+$bcolor:#000000;
+$tcolor: #fca709a8;
+$rcolor: #ff0000;
+$dcolor: rgb(169, 169, 169);
+$ocolor: #ffa500;
+// end of colors
+
+// dimensions
+$h:100%;
+$w:100%;
+$ha: auto;
+$wd: 50%;
+$wd1: 95%;
+$sw2:90%;
+// end of dimensions 
+
+// positions
+$ab: absolute;
+$re: relative;
+$st: static;
+$fi: fixed;
+$r: 0px;
+$objfit: contain;
+// end of positions
+
+// cursor
+$curs: pointer;
+// end of cursor
+
+// padding
+$pad: 10px;
+$padd: 15px;
+$paddd: 20px;
+$paddi: 51px;
+// end of padding
+
+// display
+$fl:flex;
+$dblock: block;
+$fldc:column;
+$fldr:row;
+$wrap: wrap;
+$justspb: space-between;
+$justspe: space-evenly;
+$justc: center;
+$align: center;
+$talign: center;
+$overf: hidden;
+// end of display
+
+// margins
+$aut: 0 auto;
+// end of margins
+
+// decorations
+$tedeco: none;
+$liyle: none;
+//  end of decorations
+
+// font sizes
+ $fosm: 10px;
+ $fomed: 15px;
+ $fomed2: 18px;
+ $fomed3: 20px;
+ $fomed4: 25px;
+ $fomed5: 30px;
+ $fomed6: 35px;
+//  end of font sizes
+
+
+
+// END OF VARIABLES
+
+    
+// HEADER STYLE
+
+header{ position: $fi; width: $w; z-index: 450; display: $fl;  background-color: $wcolor; justify-content: $justspb;
+    img{  width: 141px;height: $ha; padding-left: $pad; padding-top: $pad; object-fit: $objfit;} 
+        ul{ width: $w; top: 60px; background-color: rgba(255, 166, 0, 0.986); list-style: $tedeco; overflow: $overf; position: $ab; 
+            a{ font-weight: 700; display: $dblock;  text-decoration: $tedeco; color: $bcolor; padding: 20px; &:hover{ color: $rcolor;} } }
+                .menu{ right: $r; clear: both; transition: max-height 0.2s ease-out ; max-height: 0;}
+                    .menu-icon{ cursor: $curs; float: right;  padding: 28px 20px;position: $re;
+                     .nav-icon{  background-color: gray;   color: $rcolor;display: $dblock;height: 2px;width: 18px; position: $re; transition:background 0.2s ease-out ;} }
+                        .menu-icon .nav-icon::before{ background-color: $dcolor;  transition:all 0.2s ease-out ; content: ""; display: $dblock; height: $h; width: $w; position: $ab; top: 5px;}
+                    .menu-icon .nav-icon::after{ background-color: $dcolor; transition:all 0.2s ease-out ; content: ""; display: $dblock; height: $h; width: $w; position: $ab; top: -5px;}
+                .menu-btn{ display: $tedeco; }
+            .menu-btn:checked ~ .menu{ max-height: 240px; }
+        .menu-btn:checked ~ .menu-icon .nav-icon{  background: transparent; }
+    .menu-btn:checked ~ .menu-icon .nav-icon::before{ transform:rotate(-45deg) ; top: 0; }
+ .menu-btn:checked ~ .menu-icon .nav-icon::after{ transform:rotate(45deg) ; top: 0;  }
+}
+
+// END OF HEADER STYLE 
+
+
+// HOME STYLE
+
+
+// Hero style
+.hero{ padding-top: $paddi;
+    .premium img{ position: $fi;position: $ab; top: 56px; right: $r; z-index: 30;} 
+        .hero-inner{ margin-top: 90px;margin-bottom: 30px;justify-content: $align;align-items: $align;text-align: $align;
+             h1{ font-family: "roboto"; font-size: $fomed5; padding-bottom: $pad; }
+                 p{ font-size: 17px; padding: 5px $pad $paddd $pad ; line-height: 1.3; } 
+                     }  
+                        }
+// end of Hero style
+
+// gallery style 
+.gallery { position: $re; width: $wd; cursor: $curs;
+    img{ display: $dblock; width: $w; height: $ha; }
+        .onHover{ position: $ab; bottom: $r; left: $r; right: $r; background-color: $tcolor; overflow: $overf; width: $w; transform: scale(0); transition: 0.3s ease; height: $h;
+           .text p{ color: $wcolor; font-size: 15px; text-align: $align; width: $w; transform: translate(0%, 0%); position: $re; top: 0%;left: 0%; height: $h; margin: 5px; text-align: $align;justify-content: $align; align-items: $align; padding-bottom: $pad; padding-top: 5px;}
+             h1{ color: $wcolor; font-size: 23px; text-align: $align; padding: $pad; transform: translate(0%, 10%);}}
+                }
+                    .gallery:hover .onHover{ transform: scale(1); } 
+                        .hover{ display: $fl; flex-wrap: $wrap;}
+// end of gallery style
+
+// END OF HOME STYLE
+
+
+
+// ABOUT US STYLE 
+
+
+// banner style
+.banner{width: $w; padding-top: 150px;display: $fl; flex-direction: $fldc;margin: $aut;justify-content: $align;text-align: $align;padding-bottom: 40px;
+    .banner-inner{ padding: $pad; 
+         h1{font-size: 56px; padding-bottom: $pad;}
+             p{ font-size: 18px;}
+                 }
+                    }
+ // end of banner style
+
+
+// gallarie style
+.gallarie{ overflow: hidden; width: $w; display: $fl; flex-direction: $fldc; background-color: $wcolor;
+    .gallarie-inner{ max-width: 600px; overflow: hidden; width: $wd1; display: $fl; flex-direction: $fldc; margin: $aut; text-align: left;
+        img{ overflow: hidden; width: $w; height: $ha;padding-top: $paddd; cursor: $curs; padding-bottom: 5px; transition: all 0.7s ease-in-out; &:hover { transform: scale(1.05); } }
+            .one, .two, .three { overflow: hidden; max-width: 400px;
+                margin: $aut; align-items: $align; justify-content: $align; padding-bottom: 30px;
+                     h5{  font-size: 20px; display: $fl; margin:  $aut; text-align: $align; align-items: $align; justify-content: $align; padding-top: 5px; padding-bottom: $pad;}
+                         p{ font-size: 16px; display: $fl; margin: $aut; justify-content: $align; align-items: $align; padding: 0px $pad $pad $pad; text-align: $align;}}}
+                            }
+// end of gallarie style
+
+// our team section
+.our-team{ display: $fl; flex-direction: $fldc; width: $w; background-color: $wcolor; justify-content: $align; align-items: $align; padding-bottom: 40px;
+    h2{ font-size: 25px; padding-bottom: $pad;}
+        p{ align-items: $align; margin: $aut; justify-content: $align; text-align: $align;}
+            .our-team-inner{ width: $wd1; margin: $aut; align-items: $align; justify-content: $align;}
+                h6{ margin:  $aut; text-align: $align; font-size: 26px; padding-top: $pad; padding-bottom: 3px;}
+                    p{ font-size: 18px;}
+                        img{ width: $w;}
+                            .icony{ margin-bottom: 15px; a{text-decoration: none; font-size: 20px;color: slategray; } i{ margin-top: 6px; padding: 3px; font-size: 20px; margin: 0 auto; text-align: center;  } }
+                            .teamflex{  a{ font-weight: 700; text-decoration: none; color: slategray; }margin-bottom: 10px; margin-top: 20px; align-items: center; justify-content: center; text-align: center; margin: 20px auto;}
+                            }
+//  end of our team section
+
+// our clients section
+.our-clients{ display: $fl; flex-direction: $fldc; width: $w; background-color: $wcolor; justify-content: $align; align-items: $align; padding-bottom: 40px;
+    h1{ font-size: $fomed5; padding-bottom: $pad;padding-top: $paddd; text-align: $align;}
+        p{ align-items: $align; font-size: 18px; margin: $aut; justify-content: $align; text-align: $align; padding: 0 $pad $paddd $pad;}
+            .brand{ display: $fl; flex-wrap: $wrap; margin: $aut; justify-content: $justspe; width: 80%;  
+                 img{ width: 34%; justify-content: $justspb;}
+                    }
+                        }
+// end of our clients section
+
+
+// END OF ABOUT US STYLE
+
+
+
+// CONTACT US STYLE
+
+
+// baner style
+.baner{z-index: 2;
+        h1{ font-size: 56px;margin-bottom: $pad;}        
+            p{ padding: $padd; color: $dcolor; font-size: $fomed3;}  
+                 .baner-inner{ padding-top: 150px; margin-bottom: $paddd;justify-content: $align;align-items: $align; text-align: $align;}  
+
+                    .info{align-items: $align;margin-bottom: 30px;justify-content: $align; max-width: 550px ; margin: 0 auto;
+                          
+                         img{ overflow: hidden; align-items: $align;justify-content: $align; margin: $aut;display: $fl; width: 97%; margin-bottom: $pad;  }          
+                             .contact-details{ width: 97%;background-color: $bcolor; color: $wcolor;justify-content: $align; align-items: $align;text-align: $align;justify-content: $align; margin: $aut;         
+                                 .address{ padding-top: $paddd; align-items: $align; 
+                                     ul{  margin-bottom: $pad;  list-style: $tedeco; margin-top: $pad;
+                                        li { margin: $aut;  width: 40px;               
+                                             i{font-size: $fomed5;color: $wcolor; }   }  }        
+                                        h3{ font-size: 25px;  }    
+                                    p{  padding-top: $pad; font-size: $fomed3; }   }   
+                                .email{ padding-top: $pad;  align-items: $align;
+                             ul{ list-style: $tedeco; margin-bottom: $pad; margin-top: $pad;
+                         li {  margin: $aut;   width: 40px;                           
+                    i{  font-size: $fomed5;  color:$wcolor; }     }  }       
+                h3{  font-size: 25px;}       
+            p,a{  font-size: 18px; padding-top: $pad; text-decoration: $tedeco;color: $dcolor; }   }   
+        .phone{  padding-top: $pad;   align-items: $align; padding-bottom: $paddd;  
+     ul{  margin-bottom: $pad;  list-style: $tedeco;  margin-top:$pad;  
+ li {width: 40px;  margin: $aut;                   
+     i{  font-size: $fomed5;color:$wcolor;}  }   }                   
+         h3{font-size: 25px;}         
+             p{ padding-top: $pad;font-size: $fomed3;}       
+                 }}
+                     }
+                         }
+.premium{ right: $r; position: $fi; top: 72px; z-index: 30; }
+// baner end
+
+// Details Section
+.details{ display: flex; flex-direction: column; width: 100%; margin: 0 auto; justify-content: center;
+    h4{ font-weight: bold; padding-top: 60px; margin: 0 auto; text-align: center; font-size: 30px ;  margin-bottom: 10px;}
+
+    form{ width: 90%; margin: 0 auto; justify-content: center; 
+    .flex1{     width: 100%;
+        .e-mail{ width: 100%; height: 46px; margin-bottom: 20px; }
+        .name { box-shadow:black;  text-align: left;  width: 100%; height: 46px; margin-bottom: 20px;   }
+        input{
+            padding:0;
+        }
+    }
+    .subject{  text-align: left;  width: 100%; height: 46px; margin-bottom: 20px; }
+    .text-area {  text-align: left; resize: none; width: 100%; height: 60px; margin-bottom: 20px; }
+
+    button{  padding-left: 10px; color: #ffffff; border:none;margin: 0 auto; align-items: center; font-size: 15px; justify-content: center; background-color: #E8A621; width: 100%; height: 46px;  margin-bottom: 20px;}
+
+    }
+
+
+
+
+
+
+
+
+}
+// end of Details Section
+
+
+// END OF CONTACT US STYLE
+
+
+// FOOTER STYLE
+footer{ width: 100%; overflow: hidden; background-color: $bcolor;color: $wcolor; display: $fl; flex-direction: $fldc; margin: $aut; justify-content: $align; align-items: $align;
+    .footer-top{ 
+        ul{display: $fl; width: 100%;
+            li{  color: #616265; padding-top: 2px; justify-content: $justspb; font-size: 13px; text-align: center; p{ font-family: "robotob"; }
+                i{ font-weight: 700;  margin: 0 auto; font-size: $fomed5; color: #616265; margin-top: $paddd;margin-bottom: 5px;} }}          
+                    h3,h5{ padding-top: 10px; font-size: 20px; display: $fl; margin: $aut; text-align:  $align;padding: 10px 70px; align-items: center; justify-content: center; }
+                    p,a{color: #616265; text-decoration: $tedeco; font-size: 15px; line-height: normal; padding: 5px; text-align: $align;}}            
+                h4{ font-size: 20px; display: $fl; margin: $aut; text-align:  $align;justify-self: $align;padding-left: 112px;}
+            hr{height: 0.5px;border: $tedeco;background-color: $dcolor; margin-bottom: $pad; width: $w; }
+        .footer-bottom{ 
+    p{ color: #616265;font-size: 14px;padding: 7px 0 15px $pad; text-align: center; }  }          
+}
+// END OF FOOTER
+
+
+// MEDIA QUERIES
+
+// home page media querry
+@media ( min-width: 568px){
+   
+    
+    
+    .our-team-inner { display: flex; width: 100%; flex: 50%; flex-wrap: wrap; 
+        .teamflex{ width: 45%;  img{ width: 96%;} }
+            }
+            .our-clients { img{ width: 34%; } }
+           
+       
+
+
+.banner  p{ padding: 20px 60px ;}
+
+
+
+    .flex{ width: 100%; overflow: hidden; justify-content: center ; text-align: center; object-fit: contain; flex: 33,3333%;}
+        footer .footer-top p{ font-size: 13px; } ul{ margin: 0 auto; align-items: center; justify-content: center; li{ padding: 5px;}}
+        .footer-item2 h4{ padding-top: 5px; padding-left: 107px;}
+        .footer-bottom{   br{ display: none;}
+                        p,a{ font-size: 13px;  display: flex;  }
+            }
+
+            
+        }
+
+@media ( min-width: 768px){
+    header{ justify-content: space-between; text-align: right;
+        img{ width: 220px; }
+         ul{ justify-content: flex-end; width: 50%; padding: unset;  position: unset;width:max-content; background-color: transparent;
+             li{ width: max-content; padding: 5px;
+                a{  font-size: 15px; padding: 30px 0px;} }
+                     }
+                        }
+                            header li{ float: left;}
+                                 header li a{ padding-right: 0px;}
+                                     header .menu{  clear: none; float: right; max-height: none; width: max-content; margin-right: 35px; }
+                                         .menu-icon{ display: none; }
+                                             .premium{ padding-top: 20px; width: 120px;}
+                                        .hero {  padding-top: 100px;
+                                     .hero-inner{
+                                h1{  font-size: 70px;}
+                              }
+                         }
+                    .gallery{ display: flex; width: 33.333%;  img{ flex: 33.333%;}}
+                footer{ width: 100%  ; overflow: hidden; .footer-top {  width: 100%; h1,h5{  padding: 15px; text-align: center; }  p,a,li{font-size: 19px; }} ul  { width: 73%; padding: 5px; margin: 0 auto; align-items: center; justify-content: center; 
+                    li{ display: flex; margin: 0px; width: 23%; text-align: center; margin-top: 0px; justify-content: center; .fab fa-twitter{ margin-right: 2px;} .tw{ padding-left: 2px; } a{padding: 0px;  } p{ font-size: 15px; margin: 25px 0px 0px 2px; padding: 0px; padding-left: 2px; } }  }
+            .flex{ margin-top: 50px; margin-bottom: 20px;  width: 100%; justify-content: space-evenly; display: flex;  .footer-item2 {  h4{margin-bottom: 17px; }  a{ justify-content: center; text-align: center; padding-top: 40px; } }  }  
+
+
+.footer-item0{ width: 33%; margin-top: -12px; padding-top: 10px; width: 30%; h3{width: 100%; margin-left: 10px; padding-left: 0px;  }  } 
+.footer-item1{ width: 33%; h5{ padding-top: 0px; } p{ padding-top: 5px; } }
+}
+footer .footer-top ul{ width: 73%; li{  width: 23%; justify-content: center; } }
+
+
+
+
+
+
+//  About Us
+
+.banner{ padding-top: 180px;  .banner  p{ padding: 20px 120px ;} }
+    .our-team {   h2{ font-size: 40px; }    
+        .our-team-inner { display: flex; width: 100%; flex: 50%; flex-wrap: wrap; 
+         .teamflex{ width: 45%;  }
+             }
+        }
+            .our-clients{ 
+                h1{  font-size: 40px; }
+                
+                width: 100%; 
+                .brand{ width: 90%; justify-content: space-evenly;
+                    img{ width: 26%;} }
+                        }
+
+// contact 
+ .details{ padding-bottom: 80px;
+     form{ width: 35%;display:flex;flex-wrap:flex;flex-wrap:wrap;
+.flex1 {width: 100%;margin-top:20px; display: flex; margin: 0 auto 20px; align-items: center; justify-content: space-between;;
+    .e-mail{ margin:0; width: 45%;  text-align: left;   border: 1px solid black;  }
+    .name{  margin:0; width: 45%; border: 1px solid black; }
+    input{
+        padding:0 5px ;
+    }
+}
+   .subject {  border: 1px solid black; }
+   .text-area{ font-family: "roboto"; font-weight: 700; color: black; border: 1px solid black; padding:10px 10px 10px 5px;}
+   .btn{
+       width:103%;
+   }
+   input, textarea{
+    padding:0 5px ;
+    margin-bottom:20px;
+}
+}
+
+
+ }
+}
+
+// end of 768px media querry
+
+
+
+//  992px media querry 
+
+@media(min-width:992px){
+    .banner  p{ padding: 20px 130px ;}
+    .baner {  .baner-inner{ p{  padding: 10px 100px; } }
+        .info{ display:flex; max-width: unset; display: flex; flex-direction: row; width: 100%; margin:0 auto; max-height:500px;overflow:hidden;
+        .img{width:50%;overflow:hidden;
+            img{ margin-bottom: unset;  width:100%;margin-bottom: 0px; max-height: 549px;}
+        }    
+             .contact-details{ width: 50%;margin-top: 5px; max-height: 570px; 
+               
+                .phone{ margin-top: -15px;
+                    a,p{
+                        font-size:14px;
+                    }
+                     ul{  margin-top: 0px;}} 
+                      .email{  margin-top: -30px; padding-left: 0px; }}
+                } 
+    }
+.details{  padding-top: 100px; }
+
+.our-team{
+    .teamflex{ flex: 13.333%; }
+        }
+
+
+}
+
+
+// end of 992px media querry 
+
+
+// 1200px Media querry
+
+@media (min-width:1200px){
+.hero {  p{ display: flex;  width: 100%; margin: 0 auto; text-align: center; align-items: center; justify-content: center;} }
+
+    .gallery { flex: 18.3333%; }
+        .footer-top { width: 80%;  ul{ max-width: 621px; li{width: 12%; }}
+             h5{ padding-left: 13px;}
+             .flex{ margin-top: 60px; margin-bottom: 60px; align-items: center; justify-content: space-evenly;   width: max-content; width: 100%;
+                .footer-item0 {  padding-top: 0px; margin-top: -6px; h3{ padding-left: 0px; padding-bottom: 5px; padding-top: 0px; } p{ padding-top: 0px; } }
+                .footer-item2  {  margin-top: 51px; h4{margin-top: -79px; margin-bottom: 25px; } a{padding-top: 0px; margin-top: -10px }   .email{  margin-top: -30px; padding-left: 150px; }  .pemail{ margin-top: -20px; } }
+                .footer-item1{   h5{ padding-top: 0px; margin-bottom: 0px; }  }
+            }
+                }
+                    .footer-bottom{   br{ display: none;}
+                        p{  display: flex;  }
+                            }
+// about us
+
+body{ width: 97%; margin: 0 auto; justify-content: center; align-items: center; }
+.gallarie{ width: 90%; margin: 0 auto;
+    .gallarie-inner{  max-width: unset; display: flex; flex-direction: row; width: 95%; flex: 43.33333%;  img{ width: 95%; }}
+        .three img{ max-height: 220.44px; height: 165px; }
+        .two img, .one img{ max-height: 165px; }
+            }
+                .our-team{ width: 70%; margin: 0 auto;
+                    .teamflex{ flex: 13.333%; }
+                        }
+                            .our-clients {
+                                .brand{  display: flex;   width: 70%;
+                                    img{ width: 13%;padding: 15px; }
+                                        }
+                                            }
+                                            .baner {
+                                                .info{   max-width: unset;  width: 95%; margin:0 auto; padding: 5px 0px;
+                                                .img{width:50%;overflow:hidden;
+                                                    img{ margin-bottom: unset;  width:100%;margin-bottom: 0px; max-height: 570px;}
+                                                }                                              
+                                            
+                                                     .contact-details{display: unset; margin-top: 0px;  width: 50%; max-height: 590px; .phone{ padding-bottom: 15px; }}
+                                                        } 
+                                            }
+                                          
+                                                   .details{ display: flex; flex-direction: column;
+                                                        .flex1{ display: flex;
+                                                            flex-direction: row;
+
+                                                        
+
+
+
+                                                        }
+
+                                                   }      
+
+                                                }
+
+
+
+
+
+
+
+
+
+
+
+
+

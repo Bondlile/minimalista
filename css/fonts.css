@@ -1,0 +1,15 @@
+@font-face{
+    font-family: "kelson";
+    src: url(/Fonts/Kelson-Light.ttf);
+    font-style: normal;
+}
+@font-face{
+    font-family: "roboto";
+    src: url('../roboto/Roboto-Thin.ttf');
+    font-style: normal;
+}
+@font-face{
+    font-family: "robotob";
+    src: url('../roboto/Roboto-Bold.ttf');
+    font-style: normal;
+}
