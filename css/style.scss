@@ -323,7 +323,7 @@ footer{ width: 100%; overflow: hidden; background-color: $bcolor;color: $wcolor;
     
     
     .our-team-inner { display: flex; width: 100%; flex: 50%; flex-wrap: wrap; 
-        .teamflex{ width: 45%;  img{ width: 96%;} }
+        .teamflex{ width: 45%; .aaa{  margin-top: 25px; } img{ width: 96%;} }
             }
             .our-clients { img{ width: 34%; } }
            
@@ -383,7 +383,7 @@ footer .footer-top ul{ width: 73%; li{  width: 23%; justify-content: center; } }
 .banner{ padding-top: 180px;  .banner  p{ padding: 20px 120px ;} }
     .our-team {   h2{ font-size: 40px; }    
         .our-team-inner { display: flex; width: 100%; flex: 50%; flex-wrap: wrap; 
-         .teamflex{ width: 45%;  }
+         .teamflex{ width: 45%; .aaa{  margin-top: 25px; }  }
              }
         }
             .our-clients{ 
@@ -426,6 +426,8 @@ footer .footer-top ul{ width: 73%; li{  width: 23%; justify-content: center; } }
 //  992px media querry 
 
 @media(min-width:992px){
+
+    
     .banner  p{ padding: 20px 130px ;}
     .baner {  .baner-inner{ p{  padding: 10px 100px; } }
         .info{ display:flex; max-width: unset; display: flex; flex-direction: row; width: 100%; margin:0 auto; max-height:500px;overflow:hidden;

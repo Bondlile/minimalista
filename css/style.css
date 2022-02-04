@@ -939,6 +939,9 @@ footer .footer-bottom p {
   .our-team-inner .teamflex {
     width: 45%;
   }
+  .our-team-inner .teamflex .aaa {
+    margin-top: 25px;
+  }
   .our-team-inner .teamflex img {
     width: 96%;
   }
@@ -1186,6 +1189,9 @@ footer .footer-bottom p {
   }
   .our-team .our-team-inner .teamflex {
     width: 45%;
+  }
+  .our-team .our-team-inner .teamflex .aaa {
+    margin-top: 25px;
   }
   .our-clients {
     width: 100%;
